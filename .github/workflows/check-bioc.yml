@@ -143,6 +143,9 @@ jobs:
           ## Edit below if you have any Windows system dependencies
         shell: Rscript {0}
 
+      - name: Install TinyTeX
+        uses: r-lib/actions/setup-tinytex@v1
+
       - name: Install BiocManager
         run: |
           message(paste('****', Sys.time(), 'installing BiocManager ****'))

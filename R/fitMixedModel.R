@@ -214,7 +214,9 @@ run_lmm <- function(obj, form, data, control = vpcontrol, fxn, REML = FALSE, use
     rescaleWeights = rescaleWeights,
     fxn = fxn,
     BPPARAM = BPPARAM,
-    reduce.in.order = TRUE
+    reduce.in.order = TRUE,
+    ## This is required for some parallel backends
+    REDUCE = c
   )
 
   list(
